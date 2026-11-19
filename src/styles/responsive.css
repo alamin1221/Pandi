@@ -1,0 +1,525 @@
+/* ============================================================
+   RESPONSIVE LAYOUTS
+   ============================================================ */
+
+@media (max-width: 1080px) {
+  .open-when-grid { gap: 18px; }
+  .polaroid-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  :root {
+    --nav-height: 64px;
+    --bottom-height: 78px;
+  }
+
+  .site-nav { padding: 0 16px; }
+  .site-nav__title { max-width: 46vw; font-size: 0.6rem; }
+  .site-nav__brand-text { font-size: 1.2rem; }
+  .site-nav__counter { font-size: 0.85rem; }
+
+  .nav-actions { gap: 4px; padding: 5px; }
+  .nav-button { min-width: 46px; min-height: 42px; padding: 0 12px; }
+  .nav-button__label { display: none; }
+  .nav-button--menu .nav-button__dots i { width: 3px; height: 3px; }
+  .nav-button--menu .nav-button__dots i.is-active { width: 10px; }
+
+  .chapter-menu__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .birthday-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .birthday-copy { display: flex; flex-direction: column; align-items: center; }
+  .birthday-intro { margin: 16px auto 22px; }
+  .wish-reveal { text-align: left; }
+  .cake-scene { min-height: 360px; transform: scale(0.86); transform-origin: top center; margin-bottom: -40px; }
+
+  .polaroid-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .polaroid--2, .polaroid--3, .polaroid--4 { margin-top: 0; }
+  .polaroid:nth-child(even) { transform: rotate(calc(var(--tilt) * -0.6)); }
+
+  .timeline__track::before { left: 24px; }
+  .timeline-entry,
+  .timeline-entry--right {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 30px 58px;
+  }
+  .timeline-entry__node,
+  .timeline-entry--right .timeline-entry__node {
+    left: 17px;
+    right: auto;
+  }
+  .timeline-entry__card,
+  .timeline-entry--right .timeline-entry__card { transform: none; }
+
+  .open-when-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .open-when-envelope,
+  .open-when-letter { min-height: 270px; }
+
+  .wish-garden__flowers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 8px; padding-bottom: 46px; }
+  .garden-flower { height: 180px; }
+  .garden-flower__stem { height: 112px; }
+
+  .postcard-scenery { gap: 8px; }
+  .postcard-scenery__panel { height: 78px; }
+  .postcard__writing p { font-size: 1.05rem; line-height: 1.22; }
+}
+
+@media (max-width: 600px) {
+  .page { padding-left: 16px; padding-right: 16px; }
+
+  .site-nav__chapter { max-width: 60%; }
+  .site-nav__title { max-width: 52vw; overflow: hidden; text-overflow: ellipsis; }
+
+  .welcome-content { margin-top: -6vh; }
+  .welcome-lines { margin: 18px 0 30px; }
+  .welcome-line { line-height: 1.35; }
+  .hidden-star { top: 15%; right: 10%; width: 44px; height: 44px; }
+  .secret-star-message { top: calc(15% + 50px); right: 5%; }
+  .scroll-hint { font-size: 0.62rem; bottom: calc(var(--bottom-height) + 10px); }
+
+  .birthday-title { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .cake-scene { min-height: 300px; transform: scale(0.72); margin-bottom: -80px; }
+  .confetti span { width: 6px; height: 11px; }
+
+  .page-heading h1 { font-size: clamp(1.65rem, 7vw, 2.35rem); }
+  .page-heading { margin-bottom: 22px; }
+  .page-heading__intro { font-size: 0.95rem; }
+
+  .polaroid-gallery { gap: 14px; padding: 12px 2px 40px; }
+  .polaroid { padding: 7px 7px 32px; }
+  .polaroid figcaption { left: 8px; right: 8px; bottom: 7px; }
+  .polaroid__caption { font-size: 0.86rem; }
+  .polaroid__date { display: none; }
+  .polaroid__tape { width: 48px; height: 18px; margin-left: -24px; top: -9px; }
+
+  .lightbox { padding: 10px; }
+  .lightbox__image-wrap,
+  .lightbox__image-wrap img { max-height: 58vh; }
+  .lightbox__caption h3 { font-size: 1.35rem; }
+  .lightbox__caption p { font-size: 0.85rem; }
+
+  .timeline-entry,
+  .timeline-entry--right { padding-left: 44px; }
+  .timeline__track::before { left: 15px; }
+  .timeline-entry__node,
+  .timeline-entry--right .timeline-entry__node { left: 8px; }
+  .timeline-entry__card { padding: 18px; }
+
+  .secret-stage { transform: scale(0.88); }
+  .secret-letter { padding: 20px 18px; min-height: 190px; }
+  .secret-letter p { font-size: 0.9rem; }
+
+  .letter-paper { padding: 34px 22px; }
+  .letter-paper__content p { font-size: 1rem; line-height: 1.65; }
+  .letter-greeting { font-size: 1.6rem !important; }
+
+  .open-when-grid { grid-template-columns: 1fr; gap: 16px; }
+  .open-when-card,
+  .open-when-envelope,
+  .open-when-letter { min-height: 240px; }
+  .open-when-envelope__flap { top: 24px; }
+  .open-when-envelope__body { top: 72px; }
+  .open-when-envelope__seal { top: 122px; }
+
+  .constellation__field { height: min(52vh, 440px); min-height: 330px; }
+  .star-target { width: 48px; height: 48px; }
+  .star-target__shape { font-size: 1.25rem; }
+
+  .wish-garden { min-height: 470px; }
+  .wish-garden__flowers { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 4px; }
+  .garden-flower { height: 150px; }
+  .garden-flower__bloom { width: 58px; height: 58px; margin-left: -29px; transform: scale(0.7); }
+  .garden-flower__bloom i { left: 18px; width: 20px; height: 28px; transform-origin: 10px 24px; }
+  .garden-flower__bloom b { top: 20px; left: 20px; width: 16px; height: 16px; }
+  .garden-flower__stem { height: 90px; }
+  .garden-flower__leaf { width: 22px; height: 12px; }
+  .garden-flower__leaf--left { left: -19px; }
+  .garden-flower__leaf--right { right: -19px; }
+
+  .wish-jar { transform: scale(0.86); }
+  .wish-note { padding: 36px 22px 28px; }
+
+  .postcard-scenery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .postcard-scenery__panel { height: 62px; }
+  .postcard-scenery__panel--city::after,
+  .postcard-scenery__panel--beach::after,
+  .postcard-scenery__panel--temple::after { font-size: 0.8rem; bottom: 14px; }
+  .postcard-scenery__label { font-size: 0.72rem; }
+  .postcard { aspect-ratio: 1.15 / 1; }
+  .postcard__front-art { bottom: 66px; }
+  .postcard__script { bottom: 54px; left: 22px; font-size: 1.3rem; }
+  .postcard__address { bottom: 48px; right: 22px; font-size: 0.85rem; }
+  .postcard__stamps { top: 18px; right: 18px; }
+  .postcard__stamp { width: 44px; height: 50px; font-size: 1rem; }
+  .postcard__postmark { width: 44px; height: 44px; font-size: 0.8rem; }
+  .postcard__writing { left: 24px; width: 66%; }
+  .postcard__writing p { font-size: 0.96rem; line-height: 1.18; margin-bottom: 6px; }
+
+  .finale-scene { padding-left: 18px; padding-right: 18px; }
+  .finale-wishes { gap: 8px; margin-bottom: 26px; }
+  .before-you-go { padding: 20px 18px; }
+  .quiet-footer { margin-top: 38px; }
+
+  .music-player { bottom: max(88px, calc(env(safe-area-inset-bottom) + 84px)); padding: 5px 10px 5px 5px; }
+  .music-player__disc, .music-player__disc-button { width: 34px; height: 34px; }
+  .music-player__title { font-size: 0.72rem; }
+  .music-player__panel { width: 220px; }
+}
+
+@media (max-width: 390px) {
+  .site-nav__brand-text { display: none; }
+  .nav-actions { width: max-content; }
+  .postcard-scenery { gap: 5px; }
+  .postcard-scenery__label { font-size: 0.64rem; }
+  .garden-flower__bloom { transform: scale(0.62); }
+}
+
+/* ---------- Short landscape phones ---------- */
+
+@media (max-height: 560px) and (orientation: landscape) {
+  :root { --nav-height: 52px; --bottom-height: 62px; }
+
+  .welcome-content { margin-top: 0; }
+  .welcome-lines { margin: 10px 0 18px; }
+  .welcome-line { font-size: 1.2rem; line-height: 1.3; }
+  .welcome-line:first-child { font-size: 1.8rem; }
+  .welcome-eyebrow, .scroll-hint { display: none; }
+  .cake-scene { min-height: 240px; transform: scale(0.6); margin-bottom: -90px; }
+  .birthday-intro { font-size: 0.9rem; margin: 10px auto 14px; }
+  .secret-stage { transform: scale(0.7); margin-top: -30px; }
+  .wish-garden { min-height: 300px; }
+  .garden-flower { height: 120px; }
+  .garden-flower__stem { height: 70px; }
+  .wish-jar { transform: scale(0.68); }
+  .postcard { width: min(520px, 100%); }
+}
+
+/* ---------- Coarse pointers ---------- */
+
+@media (pointer: coarse) {
+  .hidden-star,
+  .star-target,
+  .garden-flower,
+  .wish-jar__note,
+  .polaroid__button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .polaroid:hover,
+  .open-when-envelope:hover,
+  .garden-flower:hover {
+    transform: initial;
+  }
+}
+
+/* ---------- No horizontal overflow, ever ---------- */
+
+html,
+body,
+.app-shell,
+.page,
+.page--scroll {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ============================================================
+   PHONE POLISH — scrolling, spacing and touch comfort
+   ============================================================ */
+
+@media (max-width: 640px) {
+  :root {
+    --nav-height: 58px;
+    --bottom-height: 74px;
+  }
+
+  .page {
+    padding: calc(var(--nav-height) + 20px) 12px calc(var(--bottom-height) + 120px);
+    gap: 4px;
+  }
+
+  .page > * {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .site-nav {
+    padding: 0 12px;
+  }
+
+  .site-nav__brand {
+    font-size: 1.15rem;
+  }
+
+  .site-nav__chapter {
+    max-width: 62%;
+  }
+
+  .site-nav__title {
+    max-width: 56vw;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-nav__counter {
+    font-size: 0.8rem;
+  }
+
+  .nav-actions {
+    left: 12px;
+    right: 12px;
+    transform: none;
+    width: auto;
+    justify-content: space-around;
+    gap: 2px;
+    padding: 5px;
+  }
+
+  .nav-button {
+    flex: 1;
+    min-height: 46px;
+    padding: 0 8px;
+    font-size: 0.8rem;
+  }
+
+  .nav-button--next {
+    flex: 1.2;
+  }
+
+  .page-heading {
+    margin-bottom: 20px;
+  }
+
+  .page-heading h1 {
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
+
+  .page-heading__intro {
+    line-height: 1.55;
+  }
+
+  .welcome-content {
+    margin-top: -4vh;
+  }
+
+  .welcome-line {
+    font-size: clamp(1.3rem, 6.4vw, 1.9rem);
+  }
+
+  .welcome-line:first-child {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .scroll-hint {
+    white-space: normal;
+    width: 84%;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .birthday-content {
+    margin: 0 auto;
+    gap: 4px;
+  }
+
+  .birthday-title {
+    line-height: 1.12;
+  }
+
+  .cake-scene {
+    min-height: 290px;
+    transform: scale(0.78);
+    margin-bottom: -66px;
+  }
+
+  .cake-flowers {
+    left: -12px;
+    right: -12px;
+    font-size: 1.4rem;
+  }
+
+  .polaroid-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 8px 0 36px;
+  }
+
+  .polaroid {
+    padding: 6px 6px 30px;
+  }
+
+  .polaroid__caption {
+    font-size: 0.8rem;
+  }
+
+  .gallery-footer {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .secret-stage {
+    transform: scale(0.84);
+    margin: -10px auto -20px;
+  }
+
+  .letter-paper {
+    padding: 28px 18px;
+  }
+
+  .letter-paper__content p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin-bottom: 15px;
+  }
+
+  .letter-greeting {
+    font-size: 1.5rem !important;
+  }
+
+  .letter-subgreeting {
+    font-size: 1.4rem !important;
+  }
+
+  .letter-signoff {
+    font-size: 1.45rem !important;
+  }
+
+  .open-when-card,
+  .open-when-envelope,
+  .open-when-letter {
+    min-height: 230px;
+  }
+
+  .open-when-letter {
+    padding: 24px 20px;
+  }
+
+  .open-when-letter p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .constellation__field {
+    min-height: 340px;
+  }
+
+  .constellation__message {
+    padding: 16px 16px;
+  }
+
+  .wish-garden__flowers {
+    padding: 0 0 50px;
+    gap: 14px 2px;
+  }
+
+  .wish-garden__message {
+    padding: 16px;
+  }
+
+  .wish-jar {
+    transform: scale(0.82);
+  }
+
+  .postcard {
+    aspect-ratio: 1 / 1.12;
+  }
+
+  .postcard__writing {
+    width: 70%;
+    left: 20px;
+    right: auto;
+  }
+
+  .postcard__writing p {
+    font-size: 0.92rem;
+  }
+
+  .postcard__front-art {
+    bottom: 74px;
+  }
+
+  .postcard__script {
+    bottom: 58px;
+    left: 20px;
+    font-size: 1.2rem;
+  }
+
+  .postcard__address {
+    bottom: 52px;
+    right: 18px;
+    font-size: 0.78rem;
+  }
+
+  .finale-title {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+
+  .finale-wish {
+    font-size: 0.98rem;
+  }
+
+  .before-you-go__text p,
+  .final-message p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .quiet-words p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .music-player {
+    left: 10px;
+    bottom: calc(var(--bottom-height) + 12px);
+    padding: 4px 9px 4px 4px;
+  }
+
+  .music-player__title {
+    font-size: 0.68rem;
+  }
+
+  .music-player__panel {
+    width: 208px;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-nav__brand-text {
+    display: none;
+  }
+
+  .cake-scene {
+    transform: scale(0.7);
+    min-height: 260px;
+    margin-bottom: -84px;
+  }
+
+  .polaroid-gallery {
+    gap: 9px;
+  }
+
+  .postcard__front-art {
+    bottom: 80px;
+  }
+
+  .postcard__script {
+    font-size: 1.05rem;
+  }
+
+  .wish-jar {
+    transform: scale(0.76);
+  }
+}

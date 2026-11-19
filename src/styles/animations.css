@@ -1,0 +1,373 @@
+/* ============================================================
+   KEYFRAMES & MOTION UTILITIES
+   ============================================================ */
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: scale(1.03); filter: blur(8px); }
+  to { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.22; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+@keyframes nebulaPulse {
+  from { opacity: 0.38; transform: scale(1) translate(0, 0); }
+  to { opacity: 0.62; transform: scale(1.12) translate(2%, -2%); }
+}
+
+@keyframes moonGlow {
+  from { opacity: 0.55; transform: scale(0.96); }
+  to { opacity: 0.9; transform: scale(1.08); }
+}
+
+@keyframes cloudDrift {
+  from { transform: translateX(-12vw); }
+  to { transform: translateX(115vw); }
+}
+
+@keyframes particleRise {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.6); }
+  12% { opacity: 0.7; }
+  85% { opacity: 0.45; }
+  100% { opacity: 0; transform: translate3d(var(--drift, 30px), -105vh, 0) scale(1.15); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(28px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes transitionBurst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(calc(var(--i) * 17deg)) translateY(0) scale(0.4);
+  }
+  35% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(calc(var(--i) * 17deg)) translateY(-190px) scale(0);
+  }
+}
+
+@keyframes transitionOrbit {
+  0% { opacity: 0; transform: scale(0.6) rotate(0deg); }
+  45% { opacity: 0.8; }
+  100% { opacity: 0; transform: scale(1.7) rotate(130deg); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes eq {
+  from { transform: scaleY(0.35); }
+  to { transform: scaleY(1.15); }
+}
+
+@keyframes lineIn {
+  from { opacity: 0; transform: translateY(28px); filter: blur(6px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes confettiFall {
+  0% { opacity: 0; transform: translate3d(0, -8vh, 0) rotate(var(--rotate)); }
+  8% { opacity: 0.95; }
+  90% { opacity: 0.7; }
+  100% { opacity: 0; transform: translate3d(35px, 108vh, 0) rotate(calc(var(--rotate) + 540deg)); }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { transform: scaleY(1) scaleX(1) translateX(0); opacity: 0.95; }
+  25% { transform: scaleY(1.16) scaleX(0.9) translateX(-1px); opacity: 1; }
+  55% { transform: scaleY(0.9) scaleX(1.1) translateX(1px); opacity: 0.82; }
+  75% { transform: scaleY(1.1) scaleX(0.95); opacity: 1; }
+}
+
+@keyframes flameOut {
+  0% { opacity: 1; transform: scale(1); }
+  35% { opacity: 0.8; transform: scale(1.4) translateY(-4px); }
+  100% { opacity: 0; transform: scale(0) translateY(-14px); }
+}
+
+@keyframes candleSmoke {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  30% { opacity: 0.4; }
+  100% { opacity: 0; transform: translateY(-38px) scale(1.6); }
+}
+
+@keyframes wishGlow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes cakeBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes sealBreak {
+  0% { transform: scale(1) rotate(0); opacity: 1; }
+  45% { transform: scale(1.5) rotate(18deg); opacity: 1; }
+  100% { transform: scale(0) rotate(80deg); opacity: 0; }
+}
+
+@keyframes envelopeFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+
+@keyframes flapOpen {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(-175deg); }
+}
+
+@keyframes letterSlide {
+  0% { transform: translateY(18%) scale(0.92); opacity: 0; }
+  100% { transform: translateY(-56%) scale(1); opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.15); }
+}
+
+@keyframes petalSway {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(9deg); }
+}
+
+@keyframes bloomIn {
+  0% { opacity: 0; transform: scale(0.2) rotate(-25deg); }
+  70% { opacity: 1; transform: scale(1.12) rotate(5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes starPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0); filter: brightness(1); }
+  50% { transform: translate(-50%, -50%) scale(1.18) rotate(8deg); filter: brightness(1.4); }
+}
+
+@keyframes starFound {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  45% { transform: translate(-50%, -50%) scale(1.7); }
+  100% { transform: translate(-50%, -50%) scale(1.22); }
+}
+
+@keyframes lineDraw {
+  from { stroke-dashoffset: 140; opacity: 0; }
+  to { stroke-dashoffset: 0; opacity: 0.75; }
+}
+
+@keyframes noteFloat {
+  0% { opacity: 0; transform: translateY(140px) rotate(-12deg) scale(0.8); }
+  55% { opacity: 1; transform: translateY(-12px) rotate(4deg) scale(1.04); }
+  100% { opacity: 1; transform: translateY(0) rotate(-1deg) scale(1); }
+}
+
+@keyframes unfold {
+  0% { opacity: 0; transform: translateY(60px) scaleY(0.15) rotate(-6deg); }
+  60% { opacity: 1; transform: translateY(-8px) scaleY(1.06) rotate(2deg); }
+  100% { opacity: 1; transform: translateY(0) scaleY(1) rotate(0); }
+}
+
+@keyframes planeFly {
+  0% { transform: translateX(-15vw) translateY(12px) rotate(-6deg); opacity: 0; }
+  8% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translateX(115vw) translateY(-28px) rotate(-6deg); opacity: 0; }
+}
+
+@keyframes sunPulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes revealLine {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); filter: blur(8px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  100% { transform: translateX(220%) skewX(-18deg); }
+}
+
+@keyframes swayStem {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes popup {
+  0% { opacity: 0; transform: translateY(16px) scale(0.94); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes gentleBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll-triggered reveals used across every chapter. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(5px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.85s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.14s !important;
+  }
+
+  .star,
+  .particle,
+  .cloud,
+  .nebula {
+    opacity: 0.45 !important;
+  }
+
+  /* Content must be readable immediately — never wait on an animation. */
+  .page-slot,
+  .welcome-eyebrow,
+  .welcome-line,
+  .welcome-enter,
+  .scroll-hint,
+  .page-heading,
+  .birthday-copy,
+  .cake-scene,
+  .section-eyebrow,
+  .polaroid,
+  .timeline-entry,
+  .timeline-empty,
+  .soft-replay,
+  .open-when-card,
+  .open-when-letter,
+  .wish-garden__message p,
+  .wish-garden__final,
+  .wish-note,
+  .wish-note-overlay__backdrop,
+  .postcard,
+  .chapter-menu__panel,
+  .chapter-menu__backdrop,
+  .lightbox__inner,
+  .lightbox__backdrop,
+  .music-player__panel,
+  .gallery-empty {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .polaroid {
+    transform: rotate(var(--tilt)) !important;
+  }
+
+  .star-target {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .constellation__line {
+    stroke-dashoffset: 0 !important;
+    opacity: 0.75 !important;
+  }
+
+  /* State-driven reveals still work, but appear instantly. */
+  .wish-reveal.is-visible,
+  .constellation__message.is-visible,
+  .wish-garden__message.is-visible,
+  .letter-stage.is-open .letter-paper,
+  .letter-stage.is-open .letter-paper__content p,
+  .finale-wish.is-visible,
+  .before-you-go.is-visible,
+  .final-message.is-visible,
+  .quiet-words.is-visible p,
+  .quiet-signature.is-visible,
+  .quiet-footer.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .secret-scene--letter .secret-letter {
+    opacity: 1 !important;
+    transform: translateY(-56%) scale(1) !important;
+  }
+
+  .secret-scene--breaking .secret-envelope__seal,
+  .secret-scene--open .secret-envelope__seal,
+  .secret-scene--letter .secret-envelope__seal {
+    transform: scale(0) !important;
+    opacity: 0 !important;
+  }
+
+  .secret-scene--open .secret-envelope__flap,
+  .secret-scene--letter .secret-envelope__flap {
+    transform: rotateX(-175deg) !important;
+  }
+
+  .secret-scene--open .secret-envelope__paper,
+  .secret-scene--letter .secret-envelope__paper {
+    transform: translateY(-42px) !important;
+  }
+
+  .cake-scene.is-wished .cake__flame {
+    opacity: 0 !important;
+  }
+
+  .postcard-plane,
+  .confetti span,
+  .cake-sparkles {
+    display: none !important;
+  }
+
+  .reveal,
+  .reveal.is-visible,
+  [data-reveal],
+  [data-reveal].is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
